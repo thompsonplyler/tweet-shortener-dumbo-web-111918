@@ -47,11 +47,12 @@ end
 
 
 
-def selective_tweet_shortener(tweet_array)
-  if tweet_array.length < 140
-    puts tweet_array
+def selective_tweet_shortener(tweet)
+
+  if tweet.length < 140
+    tweet
   else
-    puts word_substituter(tweet_array)
+    word_substituter(tweet)
   end
 end
 

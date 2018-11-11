@@ -48,7 +48,7 @@ end
 
 
 def selective_tweet_shortener(tweet_array)
-  tweet_arry.collect do |tweet|
+  tweet_array.collect do |tweet|
     if tweet.length < 140
       puts tweet
     else

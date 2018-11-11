@@ -38,7 +38,7 @@ def word_substituter(tweet)
     changed_tweet
 end
 
-def bulk_tweet_shortener(tweet_array)
+def bulk_tweet_shortener(tweet_arr)
   new_tweet_array = []
   i=0
 

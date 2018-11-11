@@ -22,7 +22,20 @@ def dictionary
   binding.pry
 end
 
-def word_substituter(tweet_string)
+def word_substituter(tweet_array)
+dictionary
+
+tweet_array.collect do |tweet|
+  tweet.split(" ").collect do |word|
+    dictionary.each do |entry , abbrev|
+      if word == entry.to_s
+          word = abbrev
+      end
+    end
+    word
+  end.join(" ")
+end
+
 end
 
 def bulk_tweet_shortener(tweet_array)

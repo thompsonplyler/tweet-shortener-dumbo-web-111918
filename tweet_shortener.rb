@@ -54,6 +54,7 @@ def selective_tweet_shortener(tweet_array)
     else
       puts word_substituter(tweet)
     end
+  end
 end
 
 def shortened_tweet_truncator(tweet_array)

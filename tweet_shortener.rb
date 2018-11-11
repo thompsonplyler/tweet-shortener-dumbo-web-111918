@@ -39,15 +39,9 @@ def word_substituter(tweet)
 end
 
 def bulk_tweet_shortener(tweet_arr)
-  new_tweet_array = []
-  i=0
-
-  while i < tweet_arr.length
-    new_tweet_array << word_substituter(tweet_arr[i])
-    i+=1
+  tweet_arr.collect do |tweet|
+    word_substituter(tweet)
   end
-  binding.pry
-new_tweet_array
 end
 
 def selective_tweet_shortener(tweet_array)

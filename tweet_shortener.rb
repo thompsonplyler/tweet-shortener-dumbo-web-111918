@@ -40,9 +40,13 @@ end
 
 def bulk_tweet_shortener(tweet_array)
   new_tweet_array = []
-  tweet_array.each do |tweet|
-  new_tweet_array << word_substituter(tweet)
-end
+  i=0 
+
+  while i < tweet_array.length
+    new_tweet_array << word_substituter(tweet_array[i])
+    i+=1
+  end
+  binding.pry
 new_tweet_array
 end
 

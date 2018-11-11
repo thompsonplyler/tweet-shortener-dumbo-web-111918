@@ -13,6 +13,5 @@ def dictionary
       at: "@",
       and: "&",
   }
+  binding.pry
 end
-
-binding.pry

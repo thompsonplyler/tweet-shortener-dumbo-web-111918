@@ -38,11 +38,14 @@ def word_substituter(tweet)
     changed_tweet
 end
 
-def bulk_tweet_shortener(tweet_arr)
+def bulk_tweet_shortener(tweet_arr)  
   tweet_arr.collect do |tweet|
     word_substituter(tweet)
   end
+  binding.pry
 end
+
+
 
 def selective_tweet_shortener(tweet_array)
 end

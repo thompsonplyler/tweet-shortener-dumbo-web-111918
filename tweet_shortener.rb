@@ -19,7 +19,6 @@ def dictionary
       at: "@",
       and: "&",
   }
-  binding.pry
 end
 
 def word_substituter(tweet_array)

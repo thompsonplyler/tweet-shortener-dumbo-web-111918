@@ -21,20 +21,21 @@ def dictionary
   }
 end
 
-def word_substituter(tweet_array)
-dictionary
+def word_substituter(tweet)
+  changed_tweet = nil
+  dictionary
 
-tweet_array.collect do |tweet|
-  tweet.split(" ").collect do |word|
-    dictionary.each do |entry , abbrev|
-      if word == entry.to_s
+
+  changed_tweet = (tweet.split(" ").collect do |word|
+      dictionary.each do |entry, abbrev|
+        if word == entry.to_s
           word = abbrev
+        end
       end
-    end
-    word
-  end.join(" ")
-end
+      word
+    end.join(" "))
 
+    changed_tweet
 end
 
 def bulk_tweet_shortener(tweet_array)
